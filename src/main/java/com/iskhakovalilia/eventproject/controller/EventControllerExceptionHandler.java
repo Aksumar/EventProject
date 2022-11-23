@@ -13,21 +13,12 @@ import static org.springframework.http.HttpStatus.UNPROCESSABLE_ENTITY;
 public class EventControllerExceptionHandler {
 
     /**
-     * Handles validation exceptions during object creation (a filed is wrongly filled)
+     * Handles validation exceptions (a filed is wrongly filled)
+     *
      * @return ResponseEntity with code 422 - UNPROCESSABLE_ENTITY
      */
-    @ExceptionHandler(ConstraintViolationException.class)
+    @ExceptionHandler({ConstraintViolationException.class, NoSuchGeoObjectException.class})
     public ResponseEntity handleValidationException() {
         return ResponseEntity.status(UNPROCESSABLE_ENTITY).body("There is invalid fields in request");
-    }
-
-
-    /**
-     * Handles exceptions for countries/cities with invalid names.
-     * @return ResponseEntity with code 422 - UNPROCESSABLE_ENTITY
-     */
-    @ExceptionHandler(NoSuchGeoObjectException.class)
-    public ResponseEntity handleNoSuchCountryException() {
-        return ResponseEntity.status(UNPROCESSABLE_ENTITY).body("There is no such country");
     }
 }

@@ -28,7 +28,7 @@ public class EventController {
     ResponseEntity<EventDTO> getEvent(@PathVariable Long id) {
         return eventService.getEventById(id)
                 .map(event -> ResponseEntity.ok(eventMapper.toDto(event)))
-                .orElse(ResponseEntity.status(HttpStatus.NO_CONTENT).build());
+                .orElse(ResponseEntity.status(HttpStatus.BAD_REQUEST).build());
     }
 
     @PostMapping("/create")

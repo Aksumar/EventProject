@@ -19,6 +19,7 @@ public class EventDTO {
     @NotNull
     private String city;
 
+    @NotNull
     private String country;
 
     private List<GuestDTO> guests;

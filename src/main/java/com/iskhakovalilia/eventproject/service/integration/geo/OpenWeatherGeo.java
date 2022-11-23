@@ -15,7 +15,7 @@ public class OpenWeatherGeo implements GeoInfoService {
     @Value("${openweathermap.key}")
     private String API_KEY;
 
-   // @Value("${openweathermap.geo.url}")
+    @Value("${openweathermap.geo.url}")
     private String BASE_URL;
     private static final String QP_APPID = "appid";
     private static final String QP_CITY = "q";
