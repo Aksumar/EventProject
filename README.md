@@ -9,7 +9,7 @@ There are several endpoints:
 
 ### Some details
 
-I use Mapstract to mappers generation.
+I used Mapstract for mappers generation.
 
 H2 database is used in this project in in-memory mode. You can use link `http://localhost:8080/h2-console` to access H2 console. Login & password provided in `application.properties`
 
