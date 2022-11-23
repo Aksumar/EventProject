@@ -31,7 +31,7 @@ H2 database is used in this project in in-memory mode. You can use link `http://
 ### How to run docker container
 
 1. build docker image (see prev. How to build docker image)
-2. run command
+2. run command to publish a container's port to the host
 `docker run -d -p 8080:8080 event-project`
 
 ### Examples
