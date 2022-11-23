@@ -26,7 +26,7 @@ H2 database is used in this project in in-memory mode. You can use link `http://
 
 1. build executable jar (see prev. How to build executable jar)
 2. in project root directory run
-`docker build -t event-project` 
+`docker build -t event-project .` 
 
 ### How to run docker container
 
