@@ -10,6 +10,8 @@ import java.util.List;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class EventDTO {
+    private Long id;
+
     @NotNull
     private String name;
 
@@ -72,5 +74,13 @@ public class EventDTO {
 
     public void setTemperature(Float temperature) {
         this.temperature = temperature;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

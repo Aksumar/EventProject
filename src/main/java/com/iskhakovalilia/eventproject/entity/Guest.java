@@ -7,7 +7,7 @@ import javax.validation.constraints.NotNull;
 public class Guest {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue
     private Long id;
 
     @NotNull
