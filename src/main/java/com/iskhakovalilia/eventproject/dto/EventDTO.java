@@ -22,6 +22,8 @@ public class EventDTO {
     @NotNull
     private String country;
 
+    private Float temperature;
+
     private List<GuestDTO> guests;
 
     public String getName() {
@@ -62,5 +64,13 @@ public class EventDTO {
 
     public void setGuests(List<GuestDTO> guests) {
         this.guests = guests;
+    }
+
+    public Float getTemperature() {
+        return temperature;
+    }
+
+    public void setTemperature(Float temperature) {
+        this.temperature = temperature;
     }
 }
